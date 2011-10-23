@@ -1,0 +1,16 @@
+﻿@model Piedone.Models.ConfirmLeave.ConfirmLeavePart
+           
+@{
+    Script.Require("ConfirmLeave").AtFoot();
+    var fieldId = "ConfirmLeave" + Model.ContentItem.Id;
+}
+
+@*This is to handle the situation when multiple editor are on the same window (and maybe not all have this part)*@
+<input type="hidden" name="@fieldId" id="@fieldId" value="" />
+
+@using (Script.Foot())
+{
+    <script type="text/javascript">
+        $.confirmLeave.makeConfirm("@fieldId");
+    </script>
+}
