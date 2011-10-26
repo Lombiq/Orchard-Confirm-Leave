@@ -78,14 +78,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\JSLocalizationController.cs" />
     <Compile Include="Drivers\ConfirmLeavePartDriver.cs" />
     <Compile Include="Migrations.cs" />
     <Compile Include="Models\ConfirmLeavePart.cs" />
     <Compile Include="ResourceManifest.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Placement.info" />
     <Content Include="Views\EditorTemplates\Parts\ConfirmLeave.cshtml" />

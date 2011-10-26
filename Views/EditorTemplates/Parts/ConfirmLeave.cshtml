@@ -8,6 +8,8 @@
 @*This is to handle the situation when multiple editor are on the same window (and maybe not all have this part)*@
 <input type="hidden" name="@fieldId" id="@fieldId" value="" />
 
+@Url.Action("Index", new { Controller = "JSLocalization", Area = "Piedone.ConfirmLeave" } )
+
 @using (Script.Foot())
 {
     <script type="text/javascript">
