@@ -1,7 +1,7 @@
 ﻿(function ($) {
     $.extend({
         confirmLeave: {
-            editorHasChanged: false,
+            editorIsDirty: false,
 
             makeConfirm: function (fieldId) {
                 var input = $("#" + fieldId);
@@ -9,18 +9,30 @@
 
                 var that = this;
 
-                // Detect changes on input elements
-                form.change(function () {
-                    that.editorHasChanged = true;
+//                $("form").live('focus click', function (e) {
+//                    alert("lll");
+//                });
+
+                form.find("input, textarea, select").focus(function (e) {
+                    that.editorIsDirty = true;
                 });
 
-                // Detect also on textareas
-                form.find("textarea").change(function () {
-                    alert("ddddddddddddd4");
+                form.click(function (e) {
+                    that.editorIsDirty = true;
+                });
+
+                // Detect changes on input elements
+                form.change(function () {
+                    that.editorIsDirty = true;
+                });
+
+                form.submit(function (e) {
+                    that.editorIsDirty = false;
                 });
 
                 window.onbeforeunload = function () {
-                    if (that.editorHasChanged)
+                    // Maybe if (that.editorWasFocused) better?
+                    if (that.editorIsDirty)
                         return "Do";
                 };
             }
