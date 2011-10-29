@@ -9,10 +9,6 @@
 
                 var that = this;
 
-//                $("form").live('focus click', function (e) {
-//                    alert("lll");
-//                });
-
                 form.find("input, textarea, select").focus(function (e) {
                     that.editorIsDirty = true;
                 });
