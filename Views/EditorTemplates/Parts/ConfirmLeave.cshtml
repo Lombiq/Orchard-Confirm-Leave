@@ -13,9 +13,8 @@
     <script type="text/javascript">
         $(window).load(function(){
             $.getJSON("@Url.Action("Index", new { Controller = "JSLocalization", Area = "Piedone.ConfirmLeave" } )", function (data) {
-                //alert(data["confirm"]);
+                $.confirmLeave(data).makeConfirm("@fieldId");
             });
-            $.confirmLeave.makeConfirm("@fieldId");
         });
     </script>
 }

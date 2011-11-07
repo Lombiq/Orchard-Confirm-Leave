@@ -1,36 +1,39 @@
 ﻿(function ($) {
     $.extend({
-        confirmLeave: {
-            editorIsDirty: false,
+        confirmLeave: function (localizationDictionary) {
+            return {
+                editorIsDirty: false,
 
-            makeConfirm: function (fieldId) {
-                var input = $("#" + fieldId);
-                var form = input.length > 0 ? $(input[0].form) : $();
+                makeConfirm: function (fieldId) {
+                    var input = $("#" + fieldId);
+                    var form = input.length > 0 ? $(input[0].form) : $();
 
-                var that = this;
+                    var that = this;
 
-                form.find("input, textarea, select").focus(function (e) {
-                    that.editorIsDirty = true;
-                });
+                    form.find("input, textarea, select").focus(function (e) {
+                        that.editorIsDirty = true;
+                    });
 
-                form.click(function (e) {
-                    that.editorIsDirty = true;
-                });
+                    form.click(function (e) {
+                        that.editorIsDirty = true;
+                    });
 
-                // Detect changes on input elements
-                form.change(function () {
-                    that.editorIsDirty = true;
-                });
+                    // Only detects change when focus is lost, which is not necessarily the case when refreshing
+//                    form.change(function () {
+//                        that.editorIsDirty = true;
+//                    });
 
-                form.submit(function (e) {
-                    that.editorIsDirty = false;
-                });
+                    form.submit(function (e) {
+                        that.editorIsDirty = false;
+                    });
 
-                window.onbeforeunload = function () {
-                    // Maybe if (that.editorWasFocused) better?
-                    if (that.editorIsDirty)
-                        return "Do";
-                };
+                    window.onbeforeunload = function () {
+                        if (that.editorIsDirty)
+                            return localizationDictionary["confirm"];
+                    };
+
+                    return this;
+                }
             }
         }
     });

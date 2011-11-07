@@ -1,7 +1,7 @@
 Name: Confirm Leave
 AntiForgery: enabled
 Author: Piedone
-Website: http://orchardproject.net
+Website: http://confirmleave.codeplex.com
 Version: 1.0
 OrchardVersion: 1.3
 Description: A content part that when attached to types, displays a confirm message when the user wants to leave the page despite having modified content in the editor.
