@@ -72,7 +72,6 @@
     <Compile Include="Drivers\ConfirmLeavePartDriver.cs" />
     <Compile Include="Migrations.cs" />
     <Compile Include="Models\ConfirmLeavePart.cs" />
-    <Compile Include="ResourceManifest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Orchard\Orchard.Framework.csproj">

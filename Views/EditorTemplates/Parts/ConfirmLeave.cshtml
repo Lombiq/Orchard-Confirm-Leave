@@ -1,7 +1,8 @@
 ﻿@model Piedone.Models.ConfirmLeave.ConfirmLeavePart
            
 @{
-    Script.Require("ConfirmLeave").AtFoot();
+    Script.Require("jQuery");
+    Script.Include("ConfirmLeave.js").AtFoot();
     var fieldId = "ConfirmLeave" + Model.ContentItem.Id;
 }
 
