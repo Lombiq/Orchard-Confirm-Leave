@@ -84,7 +84,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Placement.info" />
+    <Content Include="Placement.info" />
     <Content Include="Views\EditorTemplates\Parts\ConfirmLeave.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
