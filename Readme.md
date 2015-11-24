@@ -6,7 +6,7 @@
 
 Add a content part that when attached to types, displays a confirm message when the user wants to leave the page despite having modified content in the editor.
 
-You can install the module from the [Gallery](http://orchardproject.net/gallery/List/Modules/Orchard.Module.Piedone.ConfirmLeave).
+You can install the module from the [Gallery](http://gallery.orchardproject.net/List/Modules/Orchard.Module.Piedone.ConfirmLeave).
 
 
 ## Documentation
