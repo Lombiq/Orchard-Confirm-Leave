@@ -3,11 +3,11 @@ AntiForgery: enabled
 Author: Piedone
 Website: https://github.com/Lombiq/Orchard-Confirm-Leave
 Version: 1.0.1
-OrchardVersion: 1.9.0
+OrchardVersion: 1.10
 Description: A content part that when attached to types, displays a confirm message when the user wants to leave the page despite having modified content in the editor.
 Features:
     Piedone.ConfirmLeave:
 		Name: Confirm Leave
         Description: A content part that when attached to types, displays a confirm message when the user wants to leave the page despite having modified content in the editor.
 		Category: Content
-		Dependencies: Orchard.jQuery
+		Dependencies: Orchard.Resources
