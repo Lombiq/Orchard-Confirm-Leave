@@ -11,7 +11,7 @@
 
                     var that = this;
 
-                    form.find("input, textarea, select").focus(function (e) {
+                    form.find("input, textarea, select").keydown(function (e) {
                         that.anyCommonFormElementIsDirty = true;
                     });
 
@@ -26,6 +26,7 @@
 
                     form.submit(function (e) {
                         that.formSubmitted = true;
+                        that.anyCommonFormElementIsDirty = false;
                     });
 
                     window.onbeforeunload = function () {
